@@ -45,7 +45,7 @@ Polling polling;
 
 # Next things I'm working on:
 1. Changing polling task freely(自由更改任务内容)
-2. Catch the exception from your async task using other HTTP client(从其他网络框架捕获请求异常和错误)
+2. Catch the exception from your async task which wrapped with other HTTP clients(从其他网络框架捕获请求异常和错误)
 3. Customize interval changing policy(自定义轮询间隔策略)
 
 
