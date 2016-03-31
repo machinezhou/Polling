@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lawson.polling">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+  <application android:allowBackup="true"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+  >
+
+    <service android:name="com.lawson.polling.PollingService">
+      <intent-filter>
+        <action android:name="com.lawson.polling.PollingService"/>
+      </intent-filter>
+    </service>
+
+    <receiver android:name="com.lawson.polling.NetworkReceiver">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+    </receiver>
+
+
+  </application>
+
+</manifest>
