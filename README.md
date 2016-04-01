@@ -8,6 +8,7 @@ It's a handy library for basic background polling.
 * Polling data to server (轮询)
 * run your own task synchronously or asynchronously (同步或异步执行你自己的任务)
 * Interval will change according to activity lifecycle, common exception and network change(轮询间隔会根据生命周期，异常以及网络信号变化而作出变化)
+* Change your task freely, especially when the main task fail the backup task will go instead etc. (可以自由更改轮询任务，比如当主任务失败，后备任务可以顶替执行)
 
 # Usage
 
