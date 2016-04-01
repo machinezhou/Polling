@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
   private void begin() {
     polling = new Polling.Builder(getApplicationContext()).interval(6000).build();
-    MyTask myTask = new MyTask(polling);
+    MyTask1 myTask = new MyTask1(polling);
 
     polling.start(myTask);
   }
