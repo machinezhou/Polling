@@ -9,7 +9,6 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
-import android.util.Log;
 
 import static com.lawson.polling.Utils.MESSAGE_CLIENT;
 import static com.lawson.polling.Utils.MESSAGE_CLIENT_DESTROY;
@@ -78,6 +77,15 @@ public class PollingConnection {
 
   public long getInterval() {
     return interval;
+  }
+
+  public void changeTask(PollingTask task) {
+    setTask(task);
+    try {
+      sendTask(MESSAGE_CLIENT);
+    } catch (RemoteException e) {
+      e.printStackTrace();
+    }
   }
 
   public void sendTask(int tag) throws RemoteException {

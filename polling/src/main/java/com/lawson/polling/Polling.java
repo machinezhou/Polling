@@ -39,6 +39,10 @@ public class Polling {
     }
   }
 
+  public void changeTask(PollingTask task){
+    connection.changeTask(task);
+  }
+
   public void pause() {
     try {
       connection.sendTask(MESSAGE_CLIENT_PAUSE);
